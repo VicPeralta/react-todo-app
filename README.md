@@ -13,7 +13,7 @@ Build using the React tutorial for beginners by Ibas Majid, available [Here](htt
 - React Library
 
 ## Live Demo
-[Live demo](https://vicperalta.github.io/math-magicians/)
+[Live demo](https://vicperalta.github.io/react-todo-app/)
 
 ## Sample demo
 <img src="./todoReact.gif" height="auto"/>
