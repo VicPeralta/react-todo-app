@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './TodoList';
 import Header from './Header';
+import InputTodo from './InputTodo';
 
 class TodoContainer extends React.PureComponent {
   constructor(props) {
@@ -26,6 +27,28 @@ class TodoContainer extends React.PureComponent {
     };
   }
 
+  getNextId() {
+    const { todos } = this.state;
+    let nextId = 0;
+    todos.forEach((todo) => {
+      if (todo.id > nextId) nextId = todo.id;
+    });
+    return nextId + 1;
+  }
+
+  addTodoItem = (title) => {
+    if (title === '') return;
+    const newTodo = {
+      id: this.getNextId(),
+      title,
+      completed: false,
+    };
+    const { todos } = this.state;
+    this.setState({
+      todos: [...todos, newTodo],
+    });
+  };
+
   handleChange = (id) => {
     this.setState((prevState) => ({
       todos: prevState.todos.map((todo) => {
@@ -41,7 +64,11 @@ class TodoContainer extends React.PureComponent {
   };
 
   delTodo = (id) => {
-    console.log(id);
+    this.setState((prev) => ({
+      todos: [
+        ...prev.todos.filter((todo) => todo.id !== id),
+      ],
+    }));
   };
 
   render() {
@@ -49,6 +76,7 @@ class TodoContainer extends React.PureComponent {
     return (
       <div>
         <Header />
+        <InputTodo addTodoProps={this.addTodoItem} />
         <TodoList
           todos={todos}
           handlechangeProps={this.handleChange}
