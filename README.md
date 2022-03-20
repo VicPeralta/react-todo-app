@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React ToDo App
+> A simple ToDo App written using React Components  
+Build using the React tutorial for beginners by Ibas Majid, available [Here](https://ibaslogic.com/react-tutorial-for-beginners/) 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Built With
 
-### `npm start`
+- HTML
+- CSS
+- Javascript
+- React Library
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Demo
+[Live demo](https://vicperalta.github.io/math-magicians/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Sample demo
+<img src="./todoReact.gif" height="auto"/>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# App structure
+<img src="./todoStructure.png" height="auto"/>
 
-### `npm run build`
+The App, at this stage, contains five components:   
+- *TodoContainer*. It is a class-based component that is responsible for holding the **state** of the application and contains the Header, InputTodo and the TodoList components. As it is the owner of the **state**, it is responsible for sending this information to the TodoList Component. It is also responsible of receiving the updated information from the InputTodo (to add a new todo), from the TodoList (to update the completed status or deleting a todo) and update the state.   
+- *InputTodo*. A class-based component responsible for receiving the input from the user and notifying its parent about this information.   
+- *Header*. A functional component that contains the App's title.   
+- *TodoList*. A class-based component that hold the list of todos. It up-lift the events  coming from the todos to its parent Component.   
+- *TodoItem*. A class-based component responsible for showing the todo and responding to the user interaction.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Get a copy  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy follow these simple example steps.  
 
-### `npm run eject`
+1.- Open the terminal window and clone the repository using this command:  
+`git clone git@github.com:VicPeralta/react-todo-app.git` 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2.- Change the directory to the math-magicians directory  
+`cd react-todo-app`  
+3.- Install the project's dependencies by running this command:   
+`npm install`  
+4.- Generate the dist folder using this command:  
+`npm run build`  
+5.- Run this command to see the page `npm start`  
+6.- To see the code open the project in the code editor of your preference.  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Author  
+👤 **Ibas Majid**  
+- Twitter: [@ibaslogic](https://twitter.com/ibaslogic)
+## Developer 
+👤 **Victor Peralta**
+- GitHub: [@VicPeralta](https://github.com/VicPeralta)
+- Twitter: [@VicPeralta](https://twitter.com/VicPeralta)
+- Linkedin: [@VicPeralta](https://www.linkedin.com/in/victor-peralta-gomez-648072107/)
 
-## Learn More
+## 🤝 Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions, issues, and feature requests are welcome!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to check the [issues page](https://github.com/VicPeralta/react-todo-app/issues).
 
-### Code Splitting
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Give a ⭐️ if you like this project!
 
-### Analyzing the Bundle Size
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- A special thank for @fernandorpm for this amazing [README template](https://github.com/microverseinc/readme-template)
 
-### Making a Progressive Web App
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is [MIT](./LICENSE.md) licensed.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
