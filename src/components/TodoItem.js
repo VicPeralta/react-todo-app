@@ -11,9 +11,7 @@ const completedStyle = {
 };
 
 const TodoItem = (props) => {
-  const { todo } = props;
-  const { handlechangeProps } = props;
-  const { handledeleteProps } = props;
+  const { todo, handlechangeProps, handledeleteProps } = props;
   const { completed } = todo;
   return (
     <li className={styles.item}>
